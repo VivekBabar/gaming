@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding:0;
+}
+body{
+  background: rgb(234, 226, 226);
+  overflow: hidden;
+}
+.gameContainer{
+  background-image: url(mountains-7508116_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.dino{
+  background-image: url(dino.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 320px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+}
+.obstacle{
+  width: 240px;
+  height: 180px;
+  background-image: url(5901e11e93587572b4b21cdc.png);
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 44vw;
+}
+
+.animateDino{
+  animation: dino 1s linear;
+}
+
+.obstacleAni{
+  animation: obstacleAni 3s linear infinite;
+}
+.gameover{
+  visibility:hidden;
+  color-interpolation-filters: red;
+}
+
+@keyframes dino{
+  0%{
+    bottom:0;
+  }
+  50%{
+    bottom:422px;
+  }
+  100%{
+    bottom:1;
+  }
+}
+
+
+@keyframes obstacleAni{
+  0%{
+    left: 100vw;
+  }
+  100%{
+    left: -10vw;
+  }
+}
